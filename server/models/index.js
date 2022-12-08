@@ -1,6 +1,8 @@
-const AttributePoints = require('./AttributePoints');
-const Character = require('./Character');
-const Equipment = require('./Equipment');
-const User = require('./User');
 
-module.exports = {AttributePoints, Character, Equipment, User};
+const User = require('./User');
+const Character = require('./Character');
+const AttributePoints = require('./AttributePoints');
+const Equipment = require('./Equipment');
+
+module.exports = { User, Character, AttributePoints, Equipment };
+

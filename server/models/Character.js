@@ -1,5 +1,11 @@
+const { Schema, model } = require('mongoose');
+
 const characterSchema = new Schema({
-    class: {
+    charName: {
+        type: String,
+        required: true,
+    },
+    charClass: {
         type: String,
         required: true,
     },
@@ -9,6 +15,12 @@ const characterSchema = new Schema({
             ref: 'AttributePoints',
         }
     ],
+    stuff: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Equipment'
+        }
+    ]
 });
 
 const Character = model('character', characterSchema);

@@ -16,6 +16,13 @@ const resolvers = {
             }
             throw new AuthenticationError('You need to be logged in!');
         },
+        characters: async () => {
+            return Character.find().populate('attributePoints');
+        },
+        character: async (parent, { charName }) => {
+            return Character.findOne({ charName }).populate('attributePoints');
+        },
+
     },
 
     Mutation: {
@@ -40,6 +47,10 @@ const resolvers = {
             const token = signToken(user);
 
             return { token, user };
+        },
+        addCharacter: async (parent, { charName, charClass }) => {
+            const character = await Character.create({ charName, charClass });
+            return character;
         },
     },
 };
