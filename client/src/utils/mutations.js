@@ -32,10 +32,6 @@ export const ADD_CHARACTER = gql`
       class
       characterCreator
       createdAt
-      comments {
-        _id
-        commentText
-      }
     }
   }
 `;

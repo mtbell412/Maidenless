@@ -48,6 +48,16 @@ export const QUERY_SINGLE_CHARACTER = gql`
       _id
       name
       class
+      attributePoints{
+        vigor
+        mind
+        endurance
+        strength
+        dexterity
+        arcane
+        hp
+        fp
+      }
       weapons {
         name
         image
