@@ -6,7 +6,7 @@ type User {
     username: String
     email: String
     password: String
-    thoughts: [Thought]!
+    characters: [Character]!
   }
   type Auth {
     token: ID!
@@ -16,10 +16,13 @@ type User {
     users: [User]
     user(username: String!): User
     me: User
+    characters: [Character]
+    character(charName: String!): Character
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    addCharacter(charName: String!, charClass: String!)
   }
 `;
 
