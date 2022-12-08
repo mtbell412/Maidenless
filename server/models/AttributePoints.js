@@ -4,7 +4,7 @@ const attributeSchema = new Schema({
     vigor: {
         type: Number,
     },
-    mine: {
+    mind: {
         type: Number,
     },
     endurance: {
