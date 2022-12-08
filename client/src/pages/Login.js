@@ -1,9 +1,22 @@
+import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+// This function was taken from https://react-bootstrap.github.io/forms/validation/, which allows validation to happen 
+function LogInForm() {
+  const [validated, setValidated] = useState(false);
 
-function LogIn() {
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
+  };
   return (
-    <Form>
+    //noValidate is used because "browsers provide their own validation UI by default on <Form>"
+    <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicUsername">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="text" placeholder="Your Username" />
@@ -20,5 +33,5 @@ function LogIn() {
     </Form>
   );
 }
-
-export default LogIn;
+render (<LogInForm/>);
+export default LogInForm;
