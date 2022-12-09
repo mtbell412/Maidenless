@@ -12,6 +12,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from "./pages/Signup";
 import Profile from './pages/Profile';
+import Character from './pages/Character';
+
 
 const myLink = createHttpLink({
     uri: '/graphql'
@@ -73,6 +75,10 @@ function App() {
                             <Route
                                 path="/profiles/:username"
                                 element={<Profile />}
+                            />
+                            <Route
+                                path="/character"
+                                element={<Character />}
                             />
                         </Routes>
                     </div>

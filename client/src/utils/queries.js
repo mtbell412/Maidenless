@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client';
-
+//do we need to ask for all the users? or do we only need all the characters?
 export const QUERY_USERS = gql`
     query users{
         users{
