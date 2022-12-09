@@ -22,7 +22,6 @@ const resolvers = {
         character: async (parent, { charName }) => {
             return Character.findOne({ charName }).populate('attributePoints');
         },
-
     },
 
     Mutation: {
@@ -61,7 +60,7 @@ const resolvers = {
                     legs,
                     talismans,
                     weapons,
-                    shields
+                    shields,
                 });
                 await Character.findOneAndUpdate(
                     {_id: context.character_id},
@@ -70,13 +69,13 @@ const resolvers = {
                 return equipment;
             }
         },
-        removeEquipment: async (parent, {helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}, context) => {
-            if (context.character) {
-                return Equipment.findOneAndUpdate(
-                    {_id: helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}
-                )
-            }
-        }
+        // removeEquipment: async (parent, {helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}, context) => {
+        //     if (context.character) {
+        //         return Equipment.findOneAndUpdate(
+        //             {_id: helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}
+        //         )
+        //     }
+        // }
     },
 };
 module.exports = resolvers;

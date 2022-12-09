@@ -26,10 +26,76 @@ const equipmentSchema = new Schema({
                 amount: {
                     type: Number,
                 },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
             }
         ],
         resistance: [
             {
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
                 name: {
                     type: String,
                 },
@@ -65,13 +131,38 @@ const equipmentSchema = new Schema({
                 name: {
                     type: String,
                 },
-
-                image: {
+                amount: {
+                    type: Number,
+                },
+                name: {
                     type: String,
                 },
-
-                description: {
+                amount: {
+                    type: Number,
+                },
+                name: {
                     type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
                 },
             },
         ],
@@ -104,6 +195,36 @@ const equipmentSchema = new Schema({
                 amount: {
                     type: Number,
                 },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
             }
         ],
         resistance: [
@@ -114,6 +235,37 @@ const equipmentSchema = new Schema({
                 amount: {
                     type: Number,
                 },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+
             },
         ],
         weight: {
@@ -140,7 +292,37 @@ const equipmentSchema = new Schema({
         dmgNegation: [
             {
                 name: {
-                    String,
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
                 },
                 amount: {
                     type: Number,
@@ -153,7 +335,37 @@ const equipmentSchema = new Schema({
                     type: String,
                 },
                 amount: {
-                    type: Number
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
+                },
+                name: {
+                    type: String,
+                },
+                amount: {
+                    type: Number,
                 },
             },
         ],
@@ -237,6 +449,187 @@ const equipmentSchema = new Schema({
     }],
 
     weapons: [{
+        slot1: [{
+
+            name: {
+                type: String,
+            },
+
+            image: {
+                type: String,
+            },
+
+            description: {
+                type: String,
+            },
+            category: {
+                type: String,
+            },
+            attack: [
+                {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                },
+            ],
+            defence: [
+                {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                },
+            ],
+            scalesWith: [
+                {
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                },
+            ],
+            requiredAttributes: [
+                {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                },
+            ],
+
+            weight: {
+                type: Number,
+            },
+        }],
         slot2: [{
 
             name: {
@@ -261,10 +654,64 @@ const equipmentSchema = new Schema({
                     amount: {
                         type: Number,
                     },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                 },
             ],
             defence: [
                 {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                     name: {
                         type: String,
                     },
@@ -281,10 +728,70 @@ const equipmentSchema = new Schema({
                     scaling: {
                         type: Number,
                     },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
                 },
             ],
             requiredAttributes: [
                 {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                     name: {
                         type: String,
                     },
@@ -322,10 +829,64 @@ const equipmentSchema = new Schema({
                     amount: {
                         type: Number,
                     },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                 },
             ],
             defence: [
                 {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                     name: {
                         type: String,
                     },
@@ -342,10 +903,52 @@ const equipmentSchema = new Schema({
                     scaling: {
                         type: Number,
                     },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
                 },
             ],
             requiredAttributes: [
                 {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                     name: {
                         type: String,
                     },
@@ -382,10 +985,70 @@ const equipmentSchema = new Schema({
                     amount: {
                         type: Number,
                     },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                 },
             ],
             defence: [
                 {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                     name: {
                         type: String,
                     },
@@ -402,10 +1065,52 @@ const equipmentSchema = new Schema({
                     scaling: {
                         type: Number,
                     },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    scaling: {
+                        type: Number,
+                    },
                 },
             ],
             requiredAttributes: [
                 {
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
+                    name: {
+                        type: String,
+                    },
+                    amount: {
+                        type: Number,
+                    },
                     name: {
                         type: String,
                     },
@@ -427,22 +1132,70 @@ const equipmentSchema = new Schema({
         image: {
             type: String,
         },
-        attack: [{
-            name: {
-                type: String,
-            }
-        }],
         description: {
             type: String,
         },
-        category: {
-            type: String,
-        },
+        attack: [{
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number
+            },
+        }],
         defence: [{
             name: {
                 type: String,
             },
+            name: {
+                type: String,
+            },
+            name: {
+                type: String,
+            },
+            name: {
+                type: String,
+            },
+            name: {
+                type: String,
+            },
+            name: {
+                type: String,
+            },
         }],
+        category: {
+            type: String,
+        },
         scaleWith: [{
             name: {
                 type: String,
@@ -457,13 +1210,45 @@ const equipmentSchema = new Schema({
             },
             amount: {
                 type: Number,
-            }
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number,
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number,
+            },
+            amount: {
+                type: Number,
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number,
+            },
+            amount: {
+                type: Number,
+            },
+            name: {
+                type: String,
+            },
+            amount: {
+                type: Number,
+            },
         }],
     }],
-    character: {
+    character: [
+        {
         type: Schema.Types.ObjectId,
         ref: 'Character',
-    }
+        }
+    ]
 });
 
 const Equipment = model('Equipment', equipmentSchema);
