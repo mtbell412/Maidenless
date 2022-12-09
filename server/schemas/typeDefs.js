@@ -8,6 +8,184 @@ type User {
     password: String
     characters: [Character]!
   }
+type Character {
+  _id: ID
+  charName: String
+  charClass: String
+}
+type Equipment {
+  helmet: [Helmet]
+}
+type Helmet {
+  name: String
+  image: String
+  dmgNegation: [{
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+  }]
+  resistance:  [{
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+    name: String
+    amount: INT
+  }]
+  weight: INT
+}
+# type chestArmor {
+#   name: String
+#   image: String
+#   dmgNegation: [{
+#     name: String
+#     amount: INT
+#   }]
+#   resistance:  [{
+#     name: String
+#     amount: INT
+#   }]
+#   weight: INT
+# }
+# type Arms {
+#   name: String
+#   image: String
+#   dmgNegation: [{
+#     name: String
+#     amount: INT
+#   }]
+#   resistance:  [{
+#     name: String
+#     amount: INT
+#   }]
+#   weight: INT
+# }
+# type Legs {
+#   name: String
+#   image: String
+#   dmgNegation: [{
+#     name: String
+#     amount: INT
+#   }]
+#   resistance:  [{
+#     name: String
+#     amount: INT
+#   }]
+#   weight: INT
+# }
+# type Talismans {
+#   slot1: [{
+#     name: String
+#     image: String
+#     effect: String
+#   }]
+#   slot2: [{
+#     name: String
+#     image: String
+#     effect: String
+#   }]
+#   slot3: [{
+#     name: String
+#     image: String
+#     effect: String
+#   }]
+#   slot4: [{
+#     name: String
+#     image: String
+#     effect: String
+#   }]
+# }
+# type Weapons {
+#   slot1: [{
+#     name: String
+#     image: String
+#     attack: [{
+#       name: String
+#       amount: INT
+#     }]
+#     defence: [{
+#       name: String
+#       amount:INT
+#     }]
+#     scalesWith: [{
+#       name: String
+#       scaling: INT
+#     }]
+#   }]
+#   slot2: [{
+#     name: String
+#     image: String
+#     attack: [{
+#       name: String
+#       amount: INT
+#     }]
+#     defence: [{
+#       name: String
+#       amount:INT
+#     }]
+#     scalesWith: [{
+#       name: String
+#       scaling: INT
+#     }]
+#   }]
+#   slot3: [{
+#     name: String
+#     image: String
+#     attack: [{
+#       name: String
+#       amount: INT
+#     }]
+#     defence: [{
+#       name: String
+#       amount:INT
+#     }]
+#     scalesWith: [{
+#       name: String
+#       scaling: INT
+#     }]
+#   }]
+#   slot4: [{
+#     name: String
+#     image: String
+#     attack: [{
+#       name: String
+#       amount: INT
+#     }]
+#     defence: [{
+#       name: String
+#       amount:INT
+#     }]
+#     scalesWith: [{
+#       name: String
+#       scaling: INT
+#     }]
+#   }]
+#   type Shields: [{
+#     name: String
+#     image: String
+#     attack: [{
+#       name: String
+#       amount: String
+#     }]
+#   }]
+# }
   type Auth {
     token: ID!
     user: User
@@ -22,7 +200,8 @@ type User {
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addCharacter(charName: String!, charClass: String!)
+    addCharacter(charName: String!, charClass: String!): Character
+    addEquipment(helmet: [Helmet]): Equipment
   }
 `;
 

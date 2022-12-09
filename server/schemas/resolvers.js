@@ -1,5 +1,5 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, Character } = require('../models');
+const { User, Character, Equipment } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
@@ -22,7 +22,6 @@ const resolvers = {
         character: async (parent, { charName }) => {
             return Character.findOne({ charName }).populate('attributePoints');
         },
-
     },
 
     Mutation: {
@@ -52,6 +51,31 @@ const resolvers = {
             const character = await Character.create({ charName, charClass });
             return character;
         },
+        addEquipment: async (parent, {helmet, chestArmor, arms, legs, talismans, weapons, shields}, context) => {
+            if(context.character) {
+                const equipment = await Equipment.create({
+                    helmet,
+                    chestArmor,
+                    arms,
+                    legs,
+                    talismans,
+                    weapons,
+                    shields,
+                });
+                await Character.findOneAndUpdate(
+                    {_id: context.character_id},
+                    {$addToSet: {equipment: equipment._id}}
+                )
+                return equipment;
+            }
+        },
+        // removeEquipment: async (parent, {helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}, context) => {
+        //     if (context.character) {
+        //         return Equipment.findOneAndUpdate(
+        //             {_id: helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}
+        //         )
+        //     }
+        // }
     },
 };
 module.exports = resolvers;
