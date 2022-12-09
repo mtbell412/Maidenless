@@ -41,7 +41,7 @@ const CharacterForm = () => {
       const { data } = await addCharacter({
         //variables should match
         //perform a query to get all the classses first which will create a dropdown menu to be used for the form
-        //attributes and stuff are not variables because of
+        //attributes and stuff are not variables because they are not user inputs
         variables: {
           characterName,
           characterClass,
@@ -66,7 +66,6 @@ const CharacterForm = () => {
 
   return (
     <div>
-      <h3>What's on your techy mind?</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -83,9 +82,9 @@ const CharacterForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="thoughtText"
+                name="characterText"
                 placeholder="Here's a new thought..."
-                value={thoughtText}
+                value={characterText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
@@ -94,7 +93,7 @@ const CharacterForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
+                Add Character
               </button>
             </div>
             {error && (
@@ -106,7 +105,7 @@ const CharacterForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{' '}
+          You need to be logged in to change your characters. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
