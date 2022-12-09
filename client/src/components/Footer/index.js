@@ -1,3 +1,6 @@
+import React from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 const Footer = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -12,7 +15,7 @@ const Footer = () => {
               &larr; Go Back
             </button>
           )}
-          <h4></h4>
+          <h4>PLaceholder</h4>
         </div>
       </footer>
     );
