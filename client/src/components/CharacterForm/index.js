@@ -82,9 +82,9 @@ const CharacterForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="thoughtText"
+                name="characterText"
                 placeholder="Here's a new thought..."
-                value={thoughtText}
+                value={characterText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}
