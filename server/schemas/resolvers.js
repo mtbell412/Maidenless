@@ -51,24 +51,24 @@ const resolvers = {
             const character = await Character.create({ characterName, characterClass });
             return character;
         },
-        addEquipment: async (parent, {helmet, chestArmor, arms, legs, talismans, weapons, shields}, context) => {
-            if(context.character) {
-                const equipment = await Equipment.create({
-                    helmet,
-                    chestArmor,
-                    arms,
-                    legs,
-                    talismans,
-                    weapons,
-                    shields,
-                });
-                await Character.findOneAndUpdate(
-                    {_id: context.character_id},
-                    {$addToSet: {equipment: equipment._id}}
-                )
-                return equipment;
-            }
-        },
+        // addEquipment: async (parent, {helmet, chestArmor, arms, legs, talismans, weapons, shields}, context) => {
+        //     if(context.character) {
+        //         const equipment = await Equipment.create({
+        //             helmet,
+        //             chestArmor,
+        //             arms,
+        //             legs,
+        //             talismans,
+        //             weapons,
+        //             shields,
+        //         });
+        //         await Character.findOneAndUpdate(
+        //             {_id: context.character_id},
+        //             {$addToSet: {equipment: equipment._id}}
+        //         )
+        //         return equipment;
+        //     }
+        // },
         // removeEquipment: async (parent, {helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}, context) => {
         //     if (context.character) {
         //         return Equipment.findOneAndUpdate(
