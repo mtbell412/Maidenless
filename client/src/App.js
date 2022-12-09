@@ -1,0 +1,84 @@
+import React from "react";
+import {
+    ApolloClient,
+    InMemoryCache,
+    ApolloProvider,
+    createHttpLink,
+} from '@apollo/client';
+// import {Apollolink} from 'apollo-link';
+import { setContext } from '@apollo/client/link/context';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import SignUp from "./pages/Signup";
+import Profile from './pages/Profile';
+
+const myLink = createHttpLink({
+    uri: '/graphql'
+});
+
+// const eldenApiLink = createHttpLink({
+//     uri: 'https://eldenring.fanapis.com/api/graphql'
+// });
+
+const authLink = setContext((_, { headers }) => {
+    const token = localStorage.getItem('id-token');
+    return {
+        headers: {
+            ...headers,
+            authorization: token ? `Bearer ${token}` : '',
+        }
+    };
+});
+
+const client = new ApolloClient({
+    // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
+    link: authLink.concat(myLink),
+    cache: new InMemoryCache(),
+});
+
+// const client = new ApolloClient({
+//     link: Apollolink.split(
+//         operation => operation.getContext().clientName === "EldenLink",
+//         eldenApiLink,
+//         authLink.concat(myLink)
+//     ),
+//     caches: new InMemoryCache(),
+// });
+
+function App() {
+    return (
+        <ApolloProvider client={client}>
+            <Router>
+                <div className="flex-column justify-flex-start min-100-vh">
+                    <Header />
+                    <div className="container">
+                        <Routes>
+                            <Route
+                                path="/"
+                                element={<Home />}
+                            />
+                            <Route
+                                path="/login"
+                                element={<Login />}
+                            />
+                            <Route
+                                path="/signup"
+                                element={<SignUp />}
+                            />
+                            <Route
+                                path="/me"
+                                element={<Profile />}
+                            />
+                            <Route
+                                path="/profiles/:username"
+                                element={<Profile />}
+                            />
+                        </Routes>
+                    </div>
+                    <Footer />
+                </div>
+            </Router>
+        </ApolloProvider>
+    )
+}
