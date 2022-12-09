@@ -4,34 +4,36 @@ import {
     InMemoryCache,
     ApolloProvider,
     createHttpLink,
+    ApolloLink
 } from '@apollo/client';
-// import {Apollolink} from 'apollo-link';
-import { setContext } from '@apollo/client/link/context';
+// import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from "./pages/Signup";
 import Profile from './pages/Profile';
 import Character from './pages/Character';
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 const myLink = createHttpLink({
-    uri: '/graphql'
+    uri: 'http://localhost:3001/graphql'
 });
 
  const eldenApiLink = createHttpLink({
      uri: 'https://eldenring.fanapis.com/api/graphql'
  });
 
-const authLink = setContext((_, { headers }) => {
-    const token = localStorage.getItem('id-token');
-    return {
-        headers: {
-            ...headers,
-            authorization: token ? `Bearer ${token}` : '',
-        }
-    };
-});
+// const authLink = setContext((_, { headers }) => {
+//     const token = localStorage.getItem('id-token');
+//     return {
+//         headers: {
+//             ...headers,
+//             authorization: token ? `Bearer ${token}` : '',
+//         }
+//     };
+// });
 
 //const client = new ApolloClient({
 //    // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
@@ -40,12 +42,12 @@ const authLink = setContext((_, { headers }) => {
 //});
 
 const client = new ApolloClient({
-    link: Apollolink.split(
+    link: ApolloLink.split(
         operation => operation.getContext().clientName === "EldenLink",
         eldenApiLink,
-        authLink.concat(myLink)
+        myLink
     ),
-    caches: new InMemoryCache(),
+    cache: new InMemoryCache(),
 });
 
 function App() {
@@ -88,3 +90,5 @@ function App() {
         </ApolloProvider>
     )
 }
+
+export default App;

@@ -19,8 +19,8 @@ const resolvers = {
         characters: async () => {
             return Character.find().populate('attributePoints');
         },
-        character: async (parent, { charName }) => {
-            return Character.findOne({ charName }).populate('attributePoints');
+        character: async (parent, { characterName }) => {
+            return Character.findOne({ characterName }).populate('attributePoints');
         },
 
     },
@@ -48,8 +48,8 @@ const resolvers = {
 
             return { token, user };
         },
-        addCharacter: async (parent, { charName, charClass }) => {
-            const character = await Character.create({ charName, charClass });
+        addCharacter: async (parent, { characterName, characterClass }) => {
+            const character = await Character.create({ characterName, characterClass });
             return character;
         },
     },

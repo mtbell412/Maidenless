@@ -13,16 +13,17 @@ const Home = () => {
         
         <main> 
             <div className ="felx-row justify-center">
-                <div className="col-12 col-md-8 mb-3">
+                Hello World
+                {/* <div className="col-12 col-md-8 mb-3">
                     {loading ? (
                         <div>Loading...</div>
                     ) : (
-                        <UserList
-                         users = {users}
-                         title="All users for the app"
-                        />
+                        // <UserList
+                        //  users = {users}
+                        //  title="All users for the app"
+                        // />
                     )}
-                </div>
+                </div> */}
             </div>
         </main>
     );

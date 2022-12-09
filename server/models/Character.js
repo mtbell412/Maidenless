@@ -1,11 +1,11 @@
 const { Schema, model } = require('mongoose');
 
 const characterSchema = new Schema({
-    charName: {
+    characterName: {
         type: String,
         required: true,
     },
-    charClass: {
+    characterClass: {
         type: String,
         required: true,
     },
@@ -23,6 +23,6 @@ const characterSchema = new Schema({
     ]
 });
 
-const Character = model('character', characterSchema);
+const Character = model('Character', characterSchema);
 
 module.exports = Character;
