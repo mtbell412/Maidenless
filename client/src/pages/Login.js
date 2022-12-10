@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import render from 'react-bootstrap/render';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 // This function was taken from https://react-bootstrap.github.io/forms/validation/, which allows validation to happen 
@@ -33,5 +34,5 @@ function LogInForm() {
     </Form>
   );
 }
-render (<LogInForm/>);
+// render (<LogInForm/>);
 export default LogInForm;

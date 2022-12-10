@@ -1,13 +1,15 @@
 import React from 'react';
-import { Navigate, useParams } from 'react-router-dom';
+// import { Navigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 import { useQuery } from '@apollo/client';
 
-import CharacterForm from '../components/CharacterForm';
-import CharacterList from '../components/CharacterList';
+// import CharacterForm from '../components/CharacterForm';
+// import CharacterList from '../components/CharacterList';
 
 import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
 
-import Auth from '../utils/auth';
+// import Auth from '../utils/auth';
 
 const Character = () => {
   const { username: userParam } = useParams();
@@ -33,10 +35,12 @@ const Character = () => {
 
   return (
     <div>
-        <CharacterForm />
+      <h1>placeholder</h1>
+        {/* <CharacterForm /> */}
     </div>
 
   );
 
 }
 
+export default Character;

@@ -1,81 +1,81 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-type User {
+  type Character {
+    _id: ID
+    characterName: String
+    characterClass: String
+  }
+  type User {
     _id: ID
     username: String
     email: String
     password: String
-    characters: [Character]!
+    characters: [Character]
   }
-type Character {
-  _id: ID
-  charName: String
-  charClass: String
-}
-type Equipment {
-  helmet: [Helmet]
-}
-type Helmet {
-  name: String
-  image: String
-  dmgNegation: [{
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-  }]
-  resistance:  [{
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-    name: String
-    amount: INT
-  }]
-  weight: INT
-}
+#type Equipment {
+#  helmet: [Helmet]
+#}
+#type Helmet {
+#  name: String
+#  image: String
+#  dmgNegation: [{
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#  }]
+#  resistance:  [{
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#    name: String
+#    amount: INT
+#  }]
+#  weight: Int
+#}
 # type chestArmor {
 #   name: String
 #   image: String
 #   dmgNegation: [{
 #     name: String
-#     amount: INT
+#     amount: Int
 #   }]
 #   resistance:  [{
 #     name: String
-#     amount: INT
+#     amount: Int
 #   }]
-#   weight: INT
+#   weight: Int
 # }
 # type Arms {
 #   name: String
 #   image: String
 #   dmgNegation: [{
 #     name: String
-#     amount: INT
+#     amount: Int
 #   }]
 #   resistance:  [{
 #     name: String
-#     amount: INT
+#     amount: Int
 #   }]
-#   weight: INT
+#   weight: Int
 # }
 # type Legs {
 #   name: String
@@ -195,13 +195,15 @@ type Helmet {
     user(username: String!): User
     me: User
     characters: [Character]
-    character(charName: String!): Character
+    character(characterName: String!): Character
   }
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+
     addCharacter(charName: String!, charClass: String!): Character
-    addEquipment(helmet: [Helmet]): Equipment
+#    addEquipment(helmet: [Helmet]): Equipment
+
   }
 `;
 
