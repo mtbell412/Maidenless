@@ -5,12 +5,11 @@ export const QUERY_USERS = gql`
         users{
             _id
             username
-            email
-            characters{
+            character{
                 _id
-                characterName
-                characterClass
-
+                charName
+                charClass
+                created at
             }
         }
     }
@@ -24,9 +23,9 @@ export const QUERY_SINGLE_USER = gql`
       email
       characters {
         _id
-        characterName
-        characterClass
-
+        charName
+        charClass
+        createdAt
       }
     }
   }
@@ -36,9 +35,9 @@ export const QUERY_USER_CHARACTER = gql`
   query getCharacters {
     characters {
         _id
-        characterName
-        characterClass
-
+        charName
+        charClass
+        createdAt
     }
   }
 `;
@@ -47,8 +46,8 @@ export const QUERY_SINGLE_CHARACTER = gql`
   query getUserCharacters($userId: ID!) {
     character(characterId: $characterId) {
       _id
-      characterName
-      characterClass
+      charName
+      charClass
       attributePoints{
         vigor
         mind
@@ -114,7 +113,7 @@ export const QUERY_SINGLE_CHARACTER = gql`
         image
         effects
       }
-
+      createdAt
      
     }
   }
@@ -128,9 +127,9 @@ export const QUERY_ME = gql`
       email
       character {
         _id
-        characterName
-        characterClass
-
+        name
+        class
+        createdAt
       }
     }
   }

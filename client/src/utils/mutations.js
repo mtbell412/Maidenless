@@ -28,10 +28,10 @@ export const ADD_CHARACTER = gql`
   mutation addCharacter($thoughtText: String!) {
     addThought(thoughtText: $thoughtText) {
       _id
-      characterName
-      characterClass
+      charName
+      charClass
       characterCreator
-
+      createdAt
     }
   }
 `;
