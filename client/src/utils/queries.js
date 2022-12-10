@@ -6,11 +6,10 @@ export const QUERY_USERS = gql`
             _id
             username
             email
-            characters{
+            character{
                 _id
                 characterName
                 characterClass
-
             }
         }
     }
@@ -26,7 +25,6 @@ export const QUERY_SINGLE_USER = gql`
         _id
         characterName
         characterClass
-
       }
     }
   }
@@ -38,7 +36,6 @@ export const QUERY_USER_CHARACTER = gql`
         _id
         characterName
         characterClass
-
     }
   }
 `;
@@ -114,7 +111,7 @@ export const QUERY_SINGLE_CHARACTER = gql`
         image
         effects
       }
-
+      createdAt
      
     }
   }
@@ -129,8 +126,7 @@ export const QUERY_ME = gql`
       character {
         _id
         characterName
-        characterClass
-
+        chacaterClass
       }
     }
   }
