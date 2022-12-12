@@ -51,25 +51,25 @@ const resolvers = {
         addCharacter: async (parent, { characterName, characterClass }) => {
             const character = await Character.create({ characterName, characterClass });
             return character;
+        },  
+        addEquipment: async (arg1, EquipmentInput, context) => {
+            const characterName =  context.body.variables.characterName;
+            // const equipmentsArray = context.body.variables.equipment;
+            // const helmet = EquipmentInput.equipment[0].armor[0].helmet;
+            // console.log('equipment0:', EquipmentInput.equipment[0]);
+            // console.log('helmet =', helmet);
+            
+            if(characterName) {
+                const equipment = await Equipment.create({
+                    armor: EquipmentInput.equipment[0].armor,
+                    // talismans: EquipmentInput.equipment[0].talismans,
+                    // weapons: EquipmentInput.equipment[0].weapons,
+                    // shields: EquipmentInput.equipment[0].shields
+                });
+               
+                return equipment;
+            }
         },
-        // addEquipment: async (parent, {helmet, chestArmor, arms, legs, talismans, weapons, shields}, context) => {
-        //     if(context.character) {
-        //         const equipment = await Equipment.create({
-        //             helmet,
-        //             chestArmor,
-        //             arms,
-        //             legs,
-        //             talismans,
-        //             weapons,
-        //             shields,
-        //         });
-        //         await Character.findOneAndUpdate(
-        //             {_id: context.character_id},
-        //             {$addToSet: {equipment: equipment._id}}
-        //         )
-        //         return equipment;
-        //     }
-        // },
         // removeEquipment: async (parent, {helmetId, chestArmorId, armsId, legsId, talismansId, weaponsId, shieldsId}, context) => {
         //     if (context.character) {
         //         return Equipment.findOneAndUpdate(
