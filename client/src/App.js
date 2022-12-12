@@ -15,6 +15,7 @@ import Profile from './pages/Profile';
 import Character from './pages/Character';
 import Header from './components/Header'
 import Footer from './components/Footer'
+import './app.css';
 
 
 const myLink = createHttpLink({
@@ -54,7 +55,7 @@ function App() {
     return (
         <ApolloProvider client={client}>
             <Router>
-                <div className="flex-column justify-flex-start min-100-vh">
+                <div className="flex-column justify-flex-start min-100-vh background">
                     <Header />
                     <div className="container">
                         <Routes>

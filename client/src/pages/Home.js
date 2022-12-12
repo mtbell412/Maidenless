@@ -10,22 +10,24 @@ const Home = () => {
     const { loading, data } = useQuery(QUERY_USERS);
     const users = data?.users || [];
 
-        return (
 
-            <main>
-                <div className="flex-row justify-center">
-                    <div className="col-12 col-md-8 mb-3">
-                        {loading ? (
-                            <div>Loading...</div>
-                        ) : (
-                            <UserList
-                                users={users}
-                                title="All users for the app"
-                            />
-                        )}
-                    </div>
-                </div>
-            </main>
-        );
-    };
-export default Home;
+    return (
+        
+        <main> 
+            <div className ="felx-row justify-center card-bg">
+                Hello World
+                {/* <div className="col-12 col-md-8 mb-3">
+                    {loading ? (
+                        <div>Loading...</div>
+                    ) : (
+                        // <UserList
+                        //  users = {users}
+                        //  title="All users for the app"
+                        // />
+                    )}
+                </div> */}
+            </div>
+        </main>
+    );
+};
+

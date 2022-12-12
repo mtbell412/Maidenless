@@ -17,7 +17,7 @@ function LogInForm() {
   };
   return (
     //noValidate is used because "browsers provide their own validation UI by default on <Form>"
-    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+    <Form noValidate validated={validated} onSubmit={handleSubmit} className="card-bg">
       <Form.Group className="mb-3" controlId="formBasicUsername">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="text" placeholder="Your Username" />
