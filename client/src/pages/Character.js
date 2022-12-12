@@ -1,11 +1,10 @@
 import React from 'react';
-// import { Navigate, useParams } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 
 import { useQuery } from '@apollo/client';
 
-// import CharacterForm from '../components/CharacterForm';
-import CharacterList from '../components/CharacterList';
+import CharacterForm from '../components/CharacterForm';
+// import CharacterList from '../components/CharacterList';
 
 import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
 
@@ -24,7 +23,7 @@ const Character = () => {
     return <div>Loading...</div>;
   }
 
-  if (!user?.username) {
+  if (!Auth.loggedIn()) {
     return (
       <h4>
         You need to be logged in to see this. Use the navigation links above to
@@ -35,8 +34,8 @@ const Character = () => {
 
   return (
     <div>
-      <h1>placeholder</h1>
-        {/* <CharacterForm /> */}
+      <h1>Character Page</h1>
+        <CharacterForm />
     </div>
 
   );

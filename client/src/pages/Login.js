@@ -1,31 +1,55 @@
 import React, { useState } from 'react';
-// import render from 'react-bootstrap/render';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-// This function was taken from https://react-bootstrap.github.io/forms/validation/, which allows validation to happen 
-function LogInForm() {
-  const [validated, setValidated] = useState(false);
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../utils/mutations';
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
+import Auth from '../utils/auth';
+
+
+
+const Login = (props) => {
+  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [login, { error, data }] = useMutation(LOGIN_USER);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    try {
+      const { data } = await login({
+        variables: { ...formState },
+      });
+
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
     }
 
-    setValidated(true);
+    setFormState({
+      email: '',
+      password: '',
+    });
   };
   return (
-    //noValidate is used because "browsers provide their own validation UI by default on <Form>"
-    <Form noValidate validated={validated} onSubmit={handleSubmit} className="card-bg">
+
+    <Form onSubmit={handleFormSubmit}>
       <Form.Group className="mb-3" controlId="formBasicUsername">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="text" placeholder="Your Username" />
+        <Form.Control onChange={handleChange} name="email" value={formState.email} type="text" placeholder="Your Username" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Your Password" />
+        <Form.Control onChange={handleChange} name="password" value={formState.password} type="password" placeholder="Your Password" />
       </Form.Group>
 
       <Button variant="dark" type="submit">
@@ -34,5 +58,4 @@ function LogInForm() {
     </Form>
   );
 }
-// render (<LogInForm/>);
-export default LogInForm;
+export default Login;

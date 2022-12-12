@@ -3,7 +3,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 // import CharacterForm from '../components/CharacterForm';
-import CharacterList from '../components/CharacterList';
+// import CharacterList from '../components/CharacterList';
 
 import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
 
@@ -26,7 +26,7 @@ const Profile = () => {
     return <div>Loading...</div>;
   }
 
-  if (!user?.username) {
+  if (!Auth.loggedIn()) {
     return (
       <h4>
         You need to be logged in to see this. Use the navigation links above to
@@ -43,12 +43,12 @@ const Profile = () => {
         </h2>
 
         <div className="col-12 col-md-10 mb-5">
-          <CharacterList
+          {/* <CharacterList
             character={user.characters}
             title={`${user.username}'s characters...`}
             showTitle={false}
             showUsername={false}
-          />
+          /> */}
         </div>
       </div>
     </div>
