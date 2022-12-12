@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 // import CharacterForm from '../components/CharacterForm';
-// import CharacterList from '../components/CharacterList';
+import CharacterList from '../components/CharacterList';
 
 import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
 

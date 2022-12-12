@@ -31,7 +31,6 @@ export const ADD_CHARACTER = gql`
       characterName
       characterClass
       characterCreator
-
     }
   }
 `;
