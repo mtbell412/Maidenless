@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Cormorant+SC:wght@600&family=Kadwa&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kadwa', serif;
+    font-size: 16px;
+    color: #d9e9e8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cormorant SC', serif;
+    margin: 0 0 0.5rem;
+    line-height: 1.25;
+    color: #DBCD9D;
+}
+
+
+.background {
+    background-color: #131517;
+}
+
+.card-bg {
+    background-color: #0B0D0E;
+}
+
+.button-primary{
+    background-color: #DBCD9D;
+    color: #0B0D0E;
+}
+
+img {
+    width: 150px;
+}

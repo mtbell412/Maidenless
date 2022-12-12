@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import popeTurtle from './PopeTurtle.png'
 
 const Footer = () => {
     const location = useLocation();
@@ -15,7 +16,8 @@ const Footer = () => {
               &larr; Go Back
             </button>
           )}
-          <h4>PLaceholder</h4>
+          <h3>You Died</h3>
+          <img src={popeTurtle} alt='popeTurtle'/>
         </div>
       </footer>
     );

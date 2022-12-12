@@ -12,7 +12,7 @@ const Home = () => {
     return (
         
         <main> 
-            <div className ="felx-row justify-center">
+            <div className ="felx-row justify-center card-bg">
                 Hello World
                 {/* <div className="col-12 col-md-8 mb-3">
                     {loading ? (

@@ -9,7 +9,7 @@ import { useQuery } from '@apollo/client';
 
 import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
 
-// import Auth from '../utils/auth';
+import Auth from '../utils/auth';
 
 const Character = () => {
   const { username: userParam } = useParams();
