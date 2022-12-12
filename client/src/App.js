@@ -82,6 +82,10 @@ function App() {
                                 path="/character"
                                 element={<Character />}
                             />
+                            <Route
+                                path="/character/:characterName"
+                                element={<Character />}
+                            />
                         </Routes>
                     </div>
                     <Footer />

@@ -10,7 +10,6 @@ const Home = () => {
     const { loading, data } = useQuery(QUERY_USERS);
     const users = data?.users || [];
 
-    if (Auth.loggedIn()) {
         return (
 
             <main>
@@ -28,13 +27,5 @@ const Home = () => {
                 </div>
             </main>
         );
-    }
-    else {
-        return (
-            <div className="flex-row justify-center">
-                You must be logged in to view users!
-            </div>
-        )
     };
-};
 export default Home;
