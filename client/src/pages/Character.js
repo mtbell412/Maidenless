@@ -34,7 +34,7 @@ const Character = () => {
 
   return (
     <div>
-      <h1>placeholder</h1>
+      <h1>Character Page</h1>
         <CharacterForm />
     </div>
 
