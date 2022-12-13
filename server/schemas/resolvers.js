@@ -49,14 +49,15 @@ const resolvers = {
             return { token, user };
         },
         addCharacter: async (parent, { characterName, characterClass }, context) => {
+            if (context.user) {
             const character = await Character.create({ characterName, characterClass });
             //update login user to add characters to the user
-            // await User.findOneAndUpdate(
-            //     { _id: context.user._id },
-            //     { $addToSet: { character: character._id} });
+             await User.findOneAndUpdate(
+                 { _id: context.user._id },
+                 { $addToSet: { characters: character._id} });
 
             return character;
-        },  
+        }}, 
         addEquipment: async (arg1, EquipmentInput, context) => {
             const characterName =  context.body.variables.characterName;
             // console.log('armor =', EquipmentInput.equipment[0].armor[0]);
