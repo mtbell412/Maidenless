@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
+import ClassForm from '../ClassForm'
 
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -17,6 +18,8 @@ import { QUERY_USER_CHARACTER, QUERY_ME, QUERY_SINGLE_CHARACTER } from '../../ut
 import Auth from '../../utils/auth';
 
 const CharacterForm = () => {
+    const {loading,data} = useQuery(QUERY_ME)
+    const userData = data?.me || {}
     const [userCharacter, setUserCharacter] = useState({
         charName: '',
         charClass: '',
@@ -55,22 +58,22 @@ const CharacterForm = () => {
 
     const [addCharacter, { error }] = useMutation(ADD_CHARACTER, {
         update(cache, { data: { addCharacter } }) {
-            try {
-                const { characters } = cache.readQuery({ query: QUERY_SINGLE_CHARACTER });
+            // try {
+            //     const { characters } = cache.readQuery({ query: QUERY_SINGLE_CHARACTER });
 
-                cache.writeQuery({
-                    query: QUERY_SINGLE_CHARACTER,
-                    data: { characters: [addCharacter, ...characters] },
-                });
-            } catch (e) {
-                console.error(e);
-            }
+            //     cache.writeQuery({
+            //         query: QUERY_SINGLE_CHARACTER,
+            //         data: { characters: [addCharacter, ...characters] },
+            //     });
+            // } catch (e) {
+            //     console.error(e);
+            // }
 
-            // update me object's cache
-            cache.writeQuery({
-                query: QUERY_ME,
-                data: { me: { ...me, characters: [...me.characters, addCharacter] } },
-            });
+            // // update me object's cache
+            // cache.writeQuery({
+            //     query: QUERY_ME,
+            //     data: { me: { ...userData, characters: [...userData.characters, addCharacter] } },
+            // });
         },
     });
 
@@ -78,14 +81,19 @@ const CharacterForm = () => {
         event.preventDefault();
 
         try {
+            console.log(userCharacter);
             const { data } = await addCharacter({
                 //variables should match
                 //perform a query to get all the classses first which will create a dropdown menu to be used for the form
                 //attributes and stuff are not variables because of
-                variables: { ...userCharacter }
+                // variables: { ...userCharacter }
+                variables: {
+                    characterName : userCharacter.charName, 
+                    characterClass: userCharacter.charClass}
             });
 
             setUserCharacter('');
+            window.location.assign('/profile');
         } catch (err) {
             console.error(err);
         }
@@ -93,11 +101,16 @@ const CharacterForm = () => {
 
     const handleChange = (event) => {
         const { name, value } = event.target;
+        console.log(name+value);
 
-        if (name === 'characterText' && value.length <= 280) {
-            setUserCharacter(value);
-            setCharacterCount(value.length);
-        }
+        // if (name === 'characterText' && value.length <= 280) {
+        //     setUserCharacter(value);
+        //     setCharacterCount(value.length);
+        // }
+        setUserCharacter({
+            ...userCharacter,
+            [name]: value
+        })
     };
 
     return (
@@ -110,36 +123,19 @@ const CharacterForm = () => {
                     <Container>
                         <Row>
                             <Col>
-                                <Form.Group className="mb-3" controlId="">
+                                <Form.Group className="mb-3">
                                     <Form.Label>Character Name</Form.Label>
                                     <Form.Control onChange={handleChange} name='charName' value={userCharacter.charName} type="text" placeholder="Character Name" />
                                 </Form.Group>
 
-                                <Form.Select>
-                                    <option>Starting Class</option>
-                                    <option value='Hero'>Hero</option>
-                                    <option value='Bandit'>Bandit</option>
-                                    <option value='Astrologer'>Astrologer</option>
-                                    <option value='Warrior'>Warrior</option>
-                                    <option value='Prisoner'>Prisoner</option>
-                                    <option value='Confessor'>Confessor</option>
-                                    <option value='Wretch'>Wretch</option>
-                                    <option value='Vagabond'>Vagabond</option>
-                                    <option value='Prophet'>Prophet</option>
-                                    <option value='Samuri'>Samuri</option>
-                                    <Form.Control onChange={handleChange} name='charClass' value={userCharacter.charClass} type="text" />
-                                </Form.Select>
+                                <ClassForm handleChange={handleChange} userCharacter={userCharacter}></ClassForm>
 
-                                <Form.Group className="mb-3" controlId="">
+                                <Form.Group className="mb-3" >
                                     <Form.Label>Level</Form.Label>
                                     <Form.Control onChange={handleChange} name='charLevel' value={userCharacter.charLevel} type="text" placeholder="1-70" />
                                     <Form.Text className="text-muted">
                                         1-713
                                     </Form.Text>
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="">
-                                    <Form.Label>Character Name</Form.Label>
-                                    <Form.Control onChange={handleChange} name='charName' value={userCharacter.charName} type="text" placeholder="Character Name" />
                                 </Form.Group>
 
                                 <Table striped bordered hover variant='dark'>

@@ -48,8 +48,13 @@ const resolvers = {
 
             return { token, user };
         },
-        addCharacter: async (parent, { characterName, characterClass }) => {
+        addCharacter: async (parent, { characterName, characterClass }, context) => {
             const character = await Character.create({ characterName, characterClass });
+            //update login user to add characters to the user
+            // await User.findOneAndUpdate(
+            //     { _id: context.user._id },
+            //     { $addToSet: { character: character._id} });
+
             return character;
         },  
         addEquipment: async (arg1, EquipmentInput, context) => {

@@ -24,6 +24,7 @@ const UserList = ({
                                     className="text-light"
                                     to={`/profiles/${user.username}`}
                                 >
+                                {user.username}
                                 </Link>
                             ) : (
                                 <>

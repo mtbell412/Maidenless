@@ -6,7 +6,7 @@ export const QUERY_USERS = gql`
             _id
             username
             email
-            character{
+            characters{
                 _id
                 characterName
                 characterClass
