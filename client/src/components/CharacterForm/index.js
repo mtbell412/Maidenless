@@ -124,14 +124,14 @@ const CharacterForm = () => {
                         <Row>
                             <Col>
                                 <Form.Group className="mb-3">
-                                    <Form.Label>Character Name</Form.Label>
+                                    <Form.Label className='golden'>Character Name</Form.Label>
                                     <Form.Control onChange={handleChange} name='charName' value={userCharacter.charName} type="text" placeholder="Character Name" />
                                 </Form.Group>
 
                                 <ClassForm handleChange={handleChange} userCharacter={userCharacter}></ClassForm>
 
                                 <Form.Group className="mb-3" >
-                                    <Form.Label>Level</Form.Label>
+                                    <Form.Label className='golden'>Level</Form.Label>
                                     <Form.Control onChange={handleChange} name='charLevel' value={userCharacter.charLevel} type="text" placeholder="1-70" />
                                     <Form.Text className="text-muted">
                                         1-713
@@ -201,6 +201,9 @@ const CharacterForm = () => {
                             </Col>
                             <Col>
                                 <Row>
+                                    <h4>Armor</h4>
+                                </Row>
+                                <Row>
                                     <Col>
                                         <Form.Select className='mb-2'>
                                             <option>Head</option>
@@ -237,6 +240,9 @@ const CharacterForm = () => {
                                     </Col>
                                 </Row>
                                 <Row>
+                                    <h4>Talismans</h4>
+                                </Row>
+                                <Row>
                                     <Col>
                                         <Form.Select className='mb-2'>
                                             <option>Talisman 1</option>
@@ -271,6 +277,9 @@ const CharacterForm = () => {
                                             <Form.Control onChange={handleChange} name='charHead' value={userCharacter.charTalismanFour} type="text" />
                                         </Form.Select>
                                     </Col>
+                                </Row>
+                                <Row>
+                                    <h4>Weapons</h4>
                                 </Row>
                                 <Row>
                                     <Col>
