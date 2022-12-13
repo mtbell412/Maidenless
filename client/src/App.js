@@ -6,7 +6,7 @@ import {
     createHttpLink,
     ApolloLink
 } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
+import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -20,28 +20,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const myLink = createHttpLink({
-    uri: '/graphql'
+    uri: 'http://localhost:3001/graphql'
 });
 
  const eldenApiLink = createHttpLink({
      uri: 'https://eldenring.fanapis.com/api/graphql'
  });
 
-// const authLink = setContext((_, { headers }) => {
-//     const token = localStorage.getItem('id-token');
-//     return {
-//         headers: {
-//             ...headers,
-//             authorization: token ? `Bearer ${token}` : '',
-//         }
-//     };
-// });
+const authLink = setContext((_, { headers }) => {
+    const token = localStorage.getItem('id_token');
+    return {
+        headers: {
+            ...headers,
+            authorization: token ? `Bearer ${token}` : '',
+        }
+    };
+});
+
 
 const client1 = new ApolloClient({
     // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
     link: authLink.concat(myLink),
     cache: new InMemoryCache(),
 });
+
 
 const client2 = new ApolloClient({
     link: eldenApiLink,

@@ -49,5 +49,6 @@ Button {
 }
 
 Link {
-    color: #DBCD9D
+    color: #DBCD9D;
+    border: none;
 }

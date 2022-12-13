@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const UserList = ({
     users,
@@ -17,10 +18,11 @@ const UserList = ({
             {showTitle && <h3>{title}</h3>}
             {users &&
                 users.map((user) => (
-                    <div key={user._id} className="card card-bg mb-3">
-                        <h4 className='card-header p2 m-0'>
+                    <div key={user._id} className="card-bg p-3 mb-3">
+                        <h4 className='golden p2 m-0'>
                             {showUsername ? (
                                 <Link
+                                    style={{textDecoration: 'none'}}
                                     className="text-light"
                                     to={`/profiles/${user.username}`}
                                 >
