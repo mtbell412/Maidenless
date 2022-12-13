@@ -20,7 +20,7 @@ const CharacterForm = () => {
     const [userCharacter, setUserCharacter] = useState({
         charName: '',
         charClass: '',
-        charLevel: 0,
+        charLevel: '',
         charHead: '',
         charChest: '',
         charLegs: '',
