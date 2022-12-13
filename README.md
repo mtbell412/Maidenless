@@ -2,18 +2,38 @@
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## Table of Contents
+* [Description](#description)
 * [Usage](#usage)
-* [License](#license)
 * [Contributions](#contributions)
-* [Future Development](#future_development)
+* [FutureDev](#futuredev)
+* [License](#license)
 * [Contact](#contact)
 
 ## Description
-A true companion app where you can create characters from Elden Ring with their associated builds and stats. 
+A true companion app where you can create characters from Elden Ring with their associated builds and stats. Also, users can use provided builds to make the process of character creation more convenient.
 
 ## Usage
+Click this link to open the application:
 Heroku Link:
-Screenshots + Website Navigation
+On the page, click 'Signup' button to create an account. Then, you can log in using the information from Signup window.
+
+
+## Contributions
+
+### Michael Bell
+React front end components and Character/Profile pages. Integration with back end graphQL 
+
+### Austin Gore
+
+### Denis Khonenev
+React.js front end, Login and Signup pages
+
+### Zach Lewis
+
+### Keyshon Royster
+
+## FutureDev
+From Presentation
 
 ## License
 MIT License
@@ -25,22 +45,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-## Contributions
-
-### Michael Bell
-React front end components and Character/Profile pages. Integration with back end graphQL 
-
-### Austin Gore
-
-### Denis Khonenev
-React.js front end, Login and Signup pages
-### Zach Lewis
-
-### Keyshon Royster
-
-## Future Development
-From Presentation
 
 ## Contact
 If you have any questions, please feel free to contact us via GitHub.
