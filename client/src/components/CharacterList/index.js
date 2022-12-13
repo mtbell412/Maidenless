@@ -8,9 +8,7 @@ const CharacterList = ({
   showTitle = true,
   showUsername = true,
 }) => {
-  if (!characters.length) {
-    return <h3>No Characters Yet, create one and you'll see it here!</h3>;
-  }
+
 
   return (
     <div>
