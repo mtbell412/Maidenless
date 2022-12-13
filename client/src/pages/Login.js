@@ -41,18 +41,18 @@ const Login = (props) => {
   };
   return (
 
-    <Form onSubmit={handleFormSubmit}>
+    <Form onSubmit={handleFormSubmit} className="card-bg p-3">
       <Form.Group className="mb-3" controlId="formBasicUsername">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label className='golden' >Email address: </Form.Label>
         <Form.Control onChange={handleChange} name="email" value={formState.email} type="text" placeholder="Your Username" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label className='golden'>Password: </Form.Label>
         <Form.Control onChange={handleChange} name="password" value={formState.password} type="password" placeholder="Your Password" />
       </Form.Group>
 
-      <Button variant="dark" type="submit">
+      <Button className='btn button-primary' type="submit">
         Log In
       </Button>
     </Form>
