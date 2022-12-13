@@ -22,7 +22,8 @@ const CharacterList = ({
                   className="text-light"
                   to={`/character/${character.characterName}`}
                 >
-                  {character.characterName} <br />
+                  {character.characterName}-{character.characterClass} 
+                  <br />
                 </Link>
               ) : (
                 <>
