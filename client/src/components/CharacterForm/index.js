@@ -93,7 +93,7 @@ const CharacterForm = () => {
             });
 
             setUserCharacter('');
-            window.location.assign('/profile');
+            window.location.assign('/me');
         } catch (err) {
             console.error(err);
         }

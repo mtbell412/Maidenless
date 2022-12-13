@@ -2,7 +2,8 @@ import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-// import CharacterList from '../components/CharacterList';
+// import CharacterForm from '../components/CharacterForm';
+import CharacterList from '../components/CharacterList';
 
 import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
 
@@ -15,7 +16,8 @@ const Profile = () => {
     variables: { username: userParam },
   });
 
-  const user = data?.me || data?.user || {};
+  const user = Auth.getProfile().data;
+  console.log(user);
   // navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/me" />;
@@ -38,17 +40,15 @@ const Profile = () => {
     <div>
       <div className="flex-row justify-center mb-3">
         <h2 className="col-12 col-md-10 card-bg golden p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+          Viewing {userParam ? `${user.username}'s`: 'your'} profile.
         </h2>
 
-        {/* <div className="col-12 card-bg col-md-10 mb-5">
+        <div className="col-12 col-md-10 mb-5">
           <CharacterList
             character={user.characters}
             title={`${user.username}'s characters...`}
-            showTitle={false}
-            showUsername={false}
           />
-        </div> */}
+        </div>
       </div>
     </div>
   );
