@@ -16,7 +16,7 @@ import Character from './pages/Character';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './app.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const myLink = createHttpLink({
     uri: 'http://localhost:3001/graphql'
