@@ -554,7 +554,7 @@ const CharacterForm = () => {
                                         <Form.Select >
                                             <option>Bolt 1</option>
                                             <option value="Ballista Bolt">Ballista Bolt</option>
-                                            <option value="Black-key Bolt">Black-key Bolt</option>
+                                            <option value="Black-key">Albaster Lord's Sword</option>
                                             <Form.Control onChange={handleChange} name='charHead' value={userCharacter.charBoltOne} type="text" />
                                         </Form.Select>
                                     </Col>
@@ -562,12 +562,12 @@ const CharacterForm = () => {
                                         <Form.Select >
                                             <option>Bolt 2</option>
                                             <option value="Ballista Bolt">Ballista Bolt</option>
-                                            <option value="Black-key Bolt">Black-key Bolt</option>
+                                            <option value="Black-key">Albaster Lord's Sword</option>
                                             <Form.Control onChange={handleChange} name='charHead' value={userCharacter.charBoltTwo} type="text" />
                                         </Form.Select>
                                     </Col>
                                 </Row>
-                            <Button variant="dark" type="submit">
+                            <Button variant="dark" type="submit" >
                                 Create Character
                             </Button>
                         </Row>
