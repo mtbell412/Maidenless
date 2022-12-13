@@ -25,13 +25,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_CHARACTER = gql`
-  mutation addCharacter($thoughtText: String!) {
-    addThought(thoughtText: $thoughtText) {
-      _id
-      characterName
-      characterClass
-      characterCreator
-    }
+mutation Mutation($characterName: String!, $characterClass: String!) {
+  addCharacter(characterName: $characterName, characterClass: $characterClass) {
+    _id
+    characterClass
+    characterName
   }
+}
 `;
 

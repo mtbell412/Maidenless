@@ -2,7 +2,6 @@ import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-// import CharacterForm from '../components/CharacterForm';
 // import CharacterList from '../components/CharacterList';
 
 import { QUERY_SINGLE_USER, QUERY_ME } from '../utils/queries';
@@ -42,14 +41,14 @@ const Profile = () => {
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
 
-        <div className="col-12 card-bg col-md-10 mb-5">
-          {/* <CharacterList
+        {/* <div className="col-12 card-bg col-md-10 mb-5">
+          <CharacterList
             character={user.characters}
             title={`${user.username}'s characters...`}
             showTitle={false}
             showUsername={false}
-          /> */}
-        </div>
+          />
+        </div> */}
       </div>
     </div>
   );
