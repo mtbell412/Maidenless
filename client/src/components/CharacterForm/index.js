@@ -67,7 +67,6 @@ const CharacterForm = () => {
             }
 
             // update me object's cache
-            const { me } = cache.readQuery({ query: QUERY_ME });
             cache.writeQuery({
                 query: QUERY_ME,
                 data: { me: { ...me, characters: [...me.characters, addCharacter] } },
@@ -572,11 +571,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                 </Row>
-<<<<<<< HEAD
-                            <Button variant="dark" type="submit" >
-=======
                             <Button className='p-2' variant="dark" type="submit">
->>>>>>> 515d5b476fc8f6bc4e01ef5be5ce8a48a209ca32
                                 Create Character
                             </Button>
                         </Row>
