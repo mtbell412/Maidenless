@@ -102,7 +102,7 @@ const CharacterForm = () => {
     };
 
     return (
-        <div>
+        <div className='card-bg p-3'>
             <h3>Choose Your Elden Ring Build!</h3>
 
             {Auth.loggedIn() ? (
@@ -138,7 +138,12 @@ const CharacterForm = () => {
                                         1-713
                                     </Form.Text>
                                 </Form.Group>
-                                <Table striped bordered hover>
+                                <Form.Group className="mb-3" controlId="">
+                                    <Form.Label>Character Name</Form.Label>
+                                    <Form.Control onChange={handleChange} name='charName' value={userCharacter.charName} type="text" placeholder="Character Name" />
+                                </Form.Group>
+
+                                <Table striped bordered hover variant='dark'>
                                     <thead>
                                         <tr>
                                             <th>Stat</th>
@@ -202,7 +207,7 @@ const CharacterForm = () => {
                             <Col>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Head</option>
                                             <option value="Alberich's Pointed Hat">Alberich's Pointed Hat</option>
                                             <option value='Albinauric Mask'>Albinauric Mask</option>
@@ -210,7 +215,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Chest</option>
                                             <option value="Alberich's Robe">Alberich's Robe</option>
                                             <option value='All-Knowing Armor'>All-Knowing Armor</option>
@@ -220,7 +225,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Legs</option>
                                             <option value="Alberich's Trousers">Alberich's Trousers</option>
                                             <option value='All-Knowing Greaves'>All-Knowing Greaves</option>
@@ -228,7 +233,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Hands</option>
                                             <option value="Alberich's Bracers">Alberich's Bracers</option>
                                             <option value='All-Knowing Gauntlets'>All-Knowing Gauntlets</option>
@@ -238,7 +243,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Talisman 1</option>
                                             <option value="Ancestral Spirit's Horn">Ancestral Spirit's Horn</option>
                                             <option value="Arrow's Reach Talisman">Arrow's Reach Talisman</option>
@@ -246,7 +251,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Talisman 2</option>
                                             <option value="Ancestral Spirit's Horn">Ancestral Spirit's Horn</option>
                                             <option value="Arrow's Reach Talisman">Arrow's Reach Talisman</option>
@@ -256,7 +261,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Talisman 3</option>
                                             <option value="Ancestral Spirit's Horn">Ancestral Spirit's Horn</option>
                                             <option value="Arrow's Reach Talisman">Arrow's Reach Talisman</option>
@@ -264,7 +269,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Talisman 4</option>
                                             <option value="Ancestral Spirit's Horn">Ancestral Spirit's Horn</option>
                                             <option value="Arrow's Reach Talisman">Arrow's Reach Talisman</option>
@@ -274,7 +279,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Left Hand 1</option>
                                             <option value="Academy Glintstone Staff">Academy Glintstone Staff</option>
                                             <option value="Albaster Lord's Sword">Albaster Lord's Sword</option>
@@ -282,7 +287,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Right Hand 1</option>
                                             <option value="Academy Glintstone Staff">Academy Glintstone Staff</option>
                                             <option value="Albaster Lord's Sword">Albaster Lord's Sword</option>
@@ -292,7 +297,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Left Hand 2</option>
                                             <option value="Academy Glintstone Staff">Academy Glintstone Staff</option>
                                             <option value="Albaster Lord's Sword">Albaster Lord's Sword</option>
@@ -300,7 +305,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Right Hand 2</option>
                                             <option value="Academy Glintstone Staff">Academy Glintstone Staff</option>
                                             <option value="Albaster Lord's Sword">Albaster Lord's Sword</option>
@@ -310,7 +315,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Left Hand 3</option>
                                             <option value="Academy Glintstone Staff">Academy Glintstone Staff</option>
                                             <option value="Albaster Lord's Sword">Albaster Lord's Sword</option>
@@ -318,7 +323,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Right Hand 3</option>
                                             <option value="Academy Glintstone Staff">Academy Glintstone Staff</option>
                                             <option value="Albaster Lord's Sword">Albaster Lord's Sword</option>
@@ -332,7 +337,7 @@ const CharacterForm = () => {
                             </Col>
 
                             <Col>
-                                <Table striped hover>
+                                <Table striped hover variant='dark'>
                                     <tbody>
                                         <tr>
                                             <td>HP</td>
@@ -365,7 +370,7 @@ const CharacterForm = () => {
                                     </tbody>
                                 </Table>
 
-                                <Table striped hover>
+                                <Table striped hover variant='dark'>
                                     <thead>
                                         <tr>
                                             <th></th>
@@ -445,7 +450,7 @@ const CharacterForm = () => {
                             </Col>
                             <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 1</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -461,7 +466,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 3</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -469,7 +474,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 4</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -479,7 +484,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 5</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -487,7 +492,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 6</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -495,7 +500,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 7</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -503,7 +508,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 8</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -513,7 +518,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 9</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -521,7 +526,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-2'>
                                             <option>Spell 10</option>
                                             <option value="Adula's Moonblade">Adula's Moonblade</option>
                                             <option value="Agheel's Flame">Agheel's Flame</option>
@@ -535,7 +540,7 @@ const CharacterForm = () => {
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-3'>
                                             <option>Arrow 1</option>
                                             <option value="Arrow">Arrow</option>
                                             <option value="Bloodbone Arrow">Bloodbone Arrow</option>
@@ -543,7 +548,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-3'>
                                             <option>Arrow 2</option>
                                             <option value="Arrow">Arrow</option>
                                             <option value="Bloodbone Arrow">Bloodbone Arrow</option>
@@ -551,7 +556,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-3'>
                                             <option>Bolt 1</option>
                                             <option value="Ballista Bolt">Ballista Bolt</option>
                                             <option value="Black-key Bolt">Black-key Bolt</option>
@@ -559,7 +564,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select >
+                                        <Form.Select className='mb-3'>
                                             <option>Bolt 2</option>
                                             <option value="Ballista Bolt">Ballista Bolt</option>
                                             <option value="Black-key Bolt">Black-key Bolt</option>
@@ -567,7 +572,7 @@ const CharacterForm = () => {
                                         </Form.Select>
                                     </Col>
                                 </Row>
-                            <Button variant="dark" type="submit">
+                            <Button className='p-2' variant="dark" type="submit">
                                 Create Character
                             </Button>
                         </Row>

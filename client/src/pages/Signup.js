@@ -39,26 +39,26 @@ const Signup = () => {
   };
 
   return (
-    <Form onSubmit={handleFormSubmit}>
+    <Form onSubmit={handleFormSubmit} className="card-bg p-3">
       <Form.Group className="mb-3" controlId="formBasicUsername">
-        <Form.Label>Create a Username</Form.Label>
+        <Form.Label className='golden'>Create a Username: </Form.Label>
         <Form.Control onChange={handleChange} name='username' value={formState.username} type="text" placeholder="New Username" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label className='golden'>Email address: </Form.Label>
         <Form.Control onChange={handleChange} name='email' value={formState.email} type="email" placeholder="Enter email" />
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Create a Password</Form.Label>
+        <Form.Label className='golden'>Create a Password: </Form.Label>
         <Form.Control onChange={handleChange} name='password' value={formState.password} type="password" placeholder="New Password" />
         <Form.Text className="text-muted">
           Your password should include...
         </Form.Text>
       </Form.Group>
 
-      <Button variant="dark" type="submit">
+      <Button className='btn golden button-primary' type="submit">
         Sign Up
       </Button>
     </Form>

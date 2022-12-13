@@ -38,3 +38,16 @@ h6 {
 img {
     width: 150px;
 }
+
+.golden {
+    color: #DBCD9D
+}
+
+Button {
+    background-color: #DBCD9D;
+    color: #0B0D0E;
+}
+
+Link {
+    color: #DBCD9D
+}

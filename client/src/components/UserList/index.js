@@ -17,8 +17,8 @@ const UserList = ({
             {showTitle && <h3>{title}</h3>}
             {users &&
                 users.map((user) => (
-                    <div key={user._id} className="card mb-3">
-                        <h4 className='card-header bg-primary text-light p2 m-0'>
+                    <div key={user._id} className="card card-bg mb-3">
+                        <h4 className='card-header p2 m-0'>
                             {showUsername ? (
                                 <Link
                                     className="text-light"
