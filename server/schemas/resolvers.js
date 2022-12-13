@@ -58,15 +58,17 @@ const resolvers = {
             // const helmet = EquipmentInput.equipment[0].armor[0].helmet;
             // console.log('equipment0:', EquipmentInput.equipment[0]);
             // console.log('helmet =', helmet);
+            // console.log('equipmentInput =', EquipmentInput.equipment[0].talismans);
             
             if(characterName) {
                 const equipment = await Equipment.create({
                     armor: EquipmentInput.equipment[0].armor,
-                    // talismans: EquipmentInput.equipment[0].talismans,
-                    // weapons: EquipmentInput.equipment[0].weapons,
-                    // shields: EquipmentInput.equipment[0].shields
+                    
+                    talismans: EquipmentInput.equipment[0].talismans,
+                    // weapons: EquipmentInput.equipment[0].weapons[0],
+                    shields: EquipmentInput.equipment[0].shields
                 });
-               
+                // "equipment[0].weapons[0].slot1[0].weight"
                 return equipment;
             }
         },

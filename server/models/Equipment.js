@@ -399,19 +399,19 @@ const equipmentSchema = new Schema({
             scalesWith: [
                 {
                     str: {
-                        type: Number,
+                        type: String,
                     },
                     dex: {
-                        type: Number,
+                        type: String,
                     },
                     Arc: {
-                        type: Number,
+                        type: String,
                     },
                     Fai: {
-                        type: Number,
+                        type: String,
                     },
                     Int: {
-                        type: Number,
+                        type: String,
                     },
                 },
             ],
@@ -504,19 +504,19 @@ const equipmentSchema = new Schema({
             scalesWith: [
                 {
                     str: {
-                        type: Number,
+                        type: String,
                     },
                     dex: {
-                        type: Number,
+                        type: String,
                     },
                     Arc: {
-                        type: Number,
+                        type: String,
                     },
                     Fai: {
-                        type: Number,
+                        type: String,
                     },
                     Int: {
-                        type: Number,
+                        type: String,
                     },
                 },
             ],
@@ -609,19 +609,19 @@ const equipmentSchema = new Schema({
             scalesWith: [
                 {
                     str: {
-                        type: Number,
+                        type: String,
                     },
                     dex: {
-                        type: Number,
+                        type: String,
                     },
                     Arc: {
-                        type: Number,
+                        type: String,
                     },
                     Fai: {
-                        type: Number,
+                        type: String,
                     },
                     Int: {
-                        type: Number,
+                        type: String,
                     },
                 },
             ],
@@ -714,19 +714,19 @@ const equipmentSchema = new Schema({
             scalesWith: [
                 {
                     str: {
-                        type: Number,
+                        type: String,
                     },
                     dex: {
-                        type: Number,
+                        type: String,
                     },
                     Arc: {
-                        type: Number,
+                        type: String,
                     },
                     Fai: {
-                        type: Number,
+                        type: String,
                     },
                     Int: {
-                        type: Number,
+                        type: String,
                     },
                 },
             ],
@@ -810,19 +810,19 @@ const equipmentSchema = new Schema({
         },
         scaleWith: [{
             str: {
-                type: Number,
+                type: String,
             },
             dex: {
-                type: Number,
+                type: String,
             },
             Arc: {
-                type: Number,
+                type: String,
             },
             Fai: {
-                type: Number,
+                type: String,
             },
             Int: {
-                type: Number,
+                type: String,
             },
         }],
         requiredAttributes: [{
