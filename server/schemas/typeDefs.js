@@ -114,7 +114,6 @@ const typeDefs = gql`
     chest: [ChestInput]
     arms: [ArmsInput]
     legs: [LegsInput]
-    weight: Float
   }
   type Armor {
     _id: ID
@@ -122,7 +121,6 @@ const typeDefs = gql`
     chest: [Chest]
     arms: [Arms]
     legs: [Legs]
-    weight: Float
   }
   input TalismanSlotInput {
     name: String
@@ -138,14 +136,14 @@ const typeDefs = gql`
   input TalismansInput {
     slot1: [TalismanSlotInput]
     slot2: [TalismanSlotInput]
-    Slot3: [TalismanSlotInput]
+    slot3: [TalismanSlotInput]
     slot4: [TalismanSlotInput]
   }
   type Talismans {
     _id: ID
     slot1: [TalismanSlots]
     slot2: [TalismanSlots]
-    Slot3: [TalismanSlots]
+    slot3: [TalismanSlots]
     slot4: [TalismanSlots]
   }
   input AttackInput {
@@ -217,14 +215,14 @@ const typeDefs = gql`
   input WeaponsInput {
     slot1: [SlotsInput]
     slot2: [SlotsInput]
-    Slot3: [SlotsInput]
+    slot3: [SlotsInput]
     slot4: [SlotsInput]
   }
   type Weapons {
     _id: ID
     slot1: [Slots]
     slot2: [Slots]
-    Slot3: [Slots]
+    slot3: [Slots]
     slot4: [Slots]
   }
   input ShieldInput {
