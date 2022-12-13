@@ -18,8 +18,9 @@ import Footer from './components/Footer'
 import './app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 const myLink = createHttpLink({
-    uri: 'http://localhost:3001/graphql'
+    uri: '/graphql'
 });
 
  const eldenApiLink = createHttpLink({
@@ -36,24 +37,20 @@ const myLink = createHttpLink({
 //     };
 // });
 
-//const client = new ApolloClient({
-//    // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
-//    link: authLink.concat(myLink),
-//    cache: new InMemoryCache(),
-//});
+const client1 = new ApolloClient({
+    // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
+    link: authLink.concat(myLink),
+    cache: new InMemoryCache(),
+});
 
-const client = new ApolloClient({
-    link: ApolloLink.split(
-        operation => operation.getContext().clientName === "EldenLink",
-        eldenApiLink,
-        myLink
-    ),
+const client2 = new ApolloClient({
+    link: eldenApiLink,
     cache: new InMemoryCache(),
 });
 
 function App() {
     return (
-        <ApolloProvider client={client}>
+        <ApolloProvider client={client1}>
             <Router>
                 <div className="flex-column justify-flex-start min-100-vh background">
                     <Header />
