@@ -20,12 +20,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const myLink = createHttpLink({
-    uri: 'http://localhost:3001/graphql'
+    uri: '/graphql'
 });
 
- const eldenApiLink = createHttpLink({
-     uri: 'https://eldenring.fanapis.com/api/graphql'
- });
+//  const eldenApiLink = createHttpLink({
+//      uri: 'https://eldenring.fanapis.com/api/graphql'
+//  });
 
 const authLink = setContext((_, { headers }) => {
     const token = localStorage.getItem('id_token');
@@ -45,10 +45,10 @@ const client1 = new ApolloClient({
 });
 
 
-const client2 = new ApolloClient({
-    link: eldenApiLink,
-    cache: new InMemoryCache(),
-});
+// const client2 = new ApolloClient({
+//     link: eldenApiLink,
+//     cache: new InMemoryCache(),
+// });
 
 function App() {
     return (
