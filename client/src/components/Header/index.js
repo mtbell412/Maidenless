@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -20,10 +20,10 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg  m-2" to="/me">
+              <Link className="btn button-primary btn-lg  m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
-              <button className="btn btn-lg  m-2" onClick={logout}>
+              <button className="btn button-primary btn-lg  m-2" onClick={logout}>
                 Logout
               </button>
             </>

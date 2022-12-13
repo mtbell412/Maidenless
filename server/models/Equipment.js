@@ -1,378 +1,262 @@
 const { Schema, model } = require('mongoose');
 
 const equipmentSchema = new Schema({
-    helmet: [{
-        name: {
-            type: String,
-        },
-
-        image: {
-            type: String,
-        },
-
-        description: {
-            type: String,
-        },
-
-        category: {
-            type: String,
-        },
-
-        dmgNegation: [
-            {
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-            }
-        ],
-        resistance: [
-            {
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
+    armor:[{
+        helmet: [{
+            name: {
+                type: String,
             },
-        ],
-        weight: {
-            type: Number,
+
+            image: {
+                type: String,
+            },
+
+            description: {
+                type: String,
+            },
+
+            category: {
+                type: String,
+            },
+
+            dmgNegation: [
+                {
+                    phy: {
+                        type: Number,
+                    },
+                    strike: {
+                        type: Number,
+                    },
+                    slash: {
+                        type: Number,
+                    },
+                    pierce: {
+                        type: Number,
+                    },
+                    mag: {
+                        type: Number,
+                    },
+                    fire: {
+                        type: Number,
+                    },
+                    light: {
+                        type: Number,
+                    },
+                    holy: {
+                        type: Number
+                    },
+                }
+            ],
+            resistance: [
+                {
+                    immunity: {
+                        type: Number,
+                    },
+                    robustness: {
+                        type: Number,
+                    },
+                    focus: {
+                        type: Number,
+                    },
+                    vitality: {
+                        type: Number,
+                    },
+                    poise: {
+                        type: Number,
+                    },
+                },
+            ],
+            weight: {
+                type: Number,
+            },
+        }],
+
+        chestArmor: [{
+            name: {
+                type: String,
+            },
+
+            image: {
+                type: String,
+            },
+
+            description: {
+                type: String,
+            },
+
+            category: {
+                type: String,
+            },
+
+            dmgNegation: [
+                {
+                    phy: {
+                        type: Number,
+                    },
+                    strike: {
+                        type: Number,
+                    },
+                    slash: {
+                        type: Number,
+                    },
+                    pierce: {
+                        type: Number,
+                    },
+                    mag: {
+                        type: Number,
+                    },
+                    fire: {
+                        type: Number,
+                    },
+                    light: {
+                        type: Number,
+                    },
+                    holy: {
+                        type: Number
+                    },
+                }
+            ],
+            weight: {
+                type: Number,
+            },
+        }],
+        arms: [{
+            name: {
+                type: String,
+            },
+
+            image: {
+                type: String,
+            },
+
+            description: {
+                type: String,
+            },
+
+            category: {
+                type: String,
+            },
+
+            dmgNegation: [
+                {
+                    phy: {
+                        type: Number,
+                    },
+                    strike: {
+                        type: Number,
+                    },
+                    slash: {
+                        type: Number,
+                    },
+                    pierce: {
+                        type: Number,
+                    },
+                    mag: {
+                        type: Number,
+                    },
+                    fire: {
+                        type: Number,
+                    },
+                    light: {
+                        type: Number,
+                    },
+                    holy: {
+                        type: Number
+                    },
+                }
+            ],
+            resistance: [
+                {
+                    immunity: {
+                        type: Number,
+                    },
+                    robustness: {
+                        type: Number,
+                    },
+                    focus: {
+                        type: Number,
+                    },
+                    vitality: {
+                        type: Number,
+                    },
+                    poise: {
+                        type: Number,
+                    },
+                },
+            ],
+            weight: {
+                type: Number,
+            },
+        }],
+        legs: {
+            name: {
+                type: String,
+            },
+
+            image: {
+                type: String,
+            },
+
+            description: {
+                type: String,
+            },
+
+            category: {
+                type: String,
+            },
+
+            dmgNegation: [
+                {
+                    phy: {
+                        type: Number,
+                    },
+                    strike: {
+                        type: Number,
+                    },
+                    slash: {
+                        type: Number,
+                    },
+                    pierce: {
+                        type: Number,
+                    },
+                    mag: {
+                        type: Number,
+                    },
+                    fire: {
+                        type: Number,
+                    },
+                    light: {
+                        type: Number,
+                    },
+                    holy: {
+                        type: Number
+                    },
+                }
+            ],
+            resistance: [
+                {
+                    immunity: {
+                        type: Number,
+                    },
+                    robustness: {
+                        type: Number,
+                    },
+                    focus: {
+                        type: Number,
+                    },
+                    vitality: {
+                        type: Number,
+                    },
+                    poise: {
+                        type: Number,
+                    },
+                },
+            ],
+            weight: {
+                type: Number
+            },
         },
     }],
-
-    chestArmor: [{
-        name: {
-            type: String,
-        },
-
-        image: {
-            type: String,
-        },
-
-        description: {
-            type: String,
-        },
-
-        category: {
-            type: String,
-        },
-
-        dmgNegation: [
-            {
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-            },
-        ],
-        weight: {
-            type: Number,
-        },
-    }],
-    arms: [{
-        name: {
-            type: String,
-        },
-
-        image: {
-            type: String,
-        },
-
-        description: {
-            type: String,
-        },
-
-        category: {
-            type: String,
-        },
-
-        dmgNegation: [
-            {
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-            }
-        ],
-        resistance: [
-            {
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-
-            },
-        ],
-        weight: {
-            type: Number,
-        },
-    }],
-    legs: {
-        name: {
-            type: String,
-        },
-
-        image: {
-            type: String,
-        },
-
-        description: {
-            type: String,
-        },
-
-        category: {
-            type: String,
-        },
-
-        dmgNegation: [
-            {
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-            }
-        ],
-        resistance: [
-            {
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-                name: {
-                    type: String,
-                },
-                amount: {
-                    type: Number,
-                },
-            },
-        ],
-        weight: {
-            type: Number
-        },
-    },
     talismans: [{
         slot1: [
             {
@@ -467,165 +351,89 @@ const equipmentSchema = new Schema({
             },
             attack: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
+                    crit: {
+                        type: Number
                     },
-                    name: {
-                        type: String,
+                    rng: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
-                    },
-                },
+                }
             ],
             defence: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
-                    },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
-                        type: Number,
+                    Boost: {
+                        type: Number
                     },
                 },
             ],
             scalesWith: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Fai: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
-                        type: Number,
-                    },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Int: {
                         type: Number,
                     },
                 },
             ],
             requiredAttributes: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Fai: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
-                        type: Number,
-                    },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Int: {
                         type: Number,
                     },
                 },
             ],
-
             weight: {
                 type: Number,
             },
@@ -648,159 +456,89 @@ const equipmentSchema = new Schema({
             },
             attack: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
+                    Crit: {
+                        type: Number
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
-                        type: Number,
+                    rng: {
+                        type: Number
                     },
                 },
             ],
             defence: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
+                    Boost: {
+                        type: Number
                     },
                 },
             ],
             scalesWith: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Fai: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
-                        type: Number,
-                    },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Int: {
                         type: Number,
                     },
                 },
             ],
             requiredAttributes: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Fai: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
-                        type: Number,
-                    },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Int: {
                         type: Number,
                     },
                 },
             ],
-
             weight: {
                 type: Number,
             },
@@ -823,136 +561,85 @@ const equipmentSchema = new Schema({
             },
             attack: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
+                    Crit: {
+                        type: Number
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
-                        type: Number,
+                    rng: {
+                        type: Number
                     },
                 },
             ],
             defence: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
+                    Boost: {
+                        type: Number
                     },
                 },
             ],
             scalesWith: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    Fai: {
+                        type: Number,
                     },
-                    scaling: {
+                    Int: {
                         type: Number,
                     },
                 },
             ],
             requiredAttributes: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Fai: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Int: {
                         type: Number,
                     },
                 },
@@ -979,142 +666,85 @@ const equipmentSchema = new Schema({
             },
             attack: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
+                    Crit: {
+                        type: Number
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
-                        type: Number,
+                    rng: {
+                        type: Number
                     },
                 },
             ],
             defence: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    phy: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    mag: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    fire: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    light: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    holy: {
+                        type: Number
                     },
-                    amount: {
-                        type: Number,
-                    },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
-                        type: Number,
+                    Boost: {
+                        type: Number
                     },
                 },
             ],
             scalesWith: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Fai: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    scaling: {
+                    Int: {
                         type: Number,
                     },
                 },
             ],
             requiredAttributes: [
                 {
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    str: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    dex: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
-                    },
-                    amount: {
+                    Arc: {
                         type: Number,
                     },
-                    name: {
-                        type: String,
+                    Fai: {
+                        type: Number,
                     },
-                    amount: {
+                    Int: {
                         type: Number,
                     },
                 },
@@ -1136,112 +766,85 @@ const equipmentSchema = new Schema({
             type: String,
         },
         attack: [{
-            name: {
-                type: String,
+            phy: {
+                type: Number,
             },
-            amount: {
+            mag: {
+                type: Number,
+            },
+            fire: {
+                type: Number,
+            },
+            light: {
+                type: Number,
+            },
+            holy: {
                 type: Number
             },
-            name: {
-                type: String,
-            },
-            amount: {
-                type: Number
-            },
-            name: {
-                type: String,
-            },
-            amount: {
-                type: Number
-            },
-            name: {
-                type: String,
-            },
-            amount: {
-                type: Number
-            },
-            name: {
-                type: String,
-            },
-            amount: {
-                type: Number
-            },
-            name: {
-                type: String,
-            },
-            amount: {
+            Crit: {
                 type: Number
             },
         }],
         defence: [{
-            name: {
-                type: String,
+            phy: {
+                type: Number,
             },
-            name: {
-                type: String,
+            mag: {
+                type: Number,
             },
-            name: {
-                type: String,
+            fire: {
+                type: Number,
             },
-            name: {
-                type: String,
+            light: {
+                type: Number,
             },
-            name: {
-                type: String,
+            holy: {
+                type: Number
             },
-            name: {
-                type: String,
+            Boost: {
+                type: Number
             },
         }],
         category: {
             type: String,
         },
         scaleWith: [{
-            name: {
-                type: String,
-            },
-            scaling: {
+            str: {
                 type: Number,
-            }
+            },
+            dex: {
+                type: Number,
+            },
+            Arc: {
+                type: Number,
+            },
+            Fai: {
+                type: Number,
+            },
+            Int: {
+                type: Number,
+            },
         }],
         requiredAttributes: [{
-            name: {
-                type: String,
-            },
-            amount: {
+            str: {
                 type: Number,
             },
-            name: {
-                type: String,
-            },
-            amount: {
+            dex: {
                 type: Number,
             },
-            name: {
-                type: String,
-            },
-            amount: {
+            Arc: {
                 type: Number,
             },
-            amount: {
+            Fai: {
                 type: Number,
             },
-            name: {
-                type: String,
-            },
-            amount: {
-                type: Number,
-            },
-            amount: {
-                type: Number,
-            },
-            name: {
-                type: String,
-            },
-            amount: {
+            Int: {
                 type: Number,
             },
         }],
+        weight: {
+            type: Number
+        }
     }],
     character: [
         {
