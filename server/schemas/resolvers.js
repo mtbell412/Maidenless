@@ -59,19 +59,16 @@ const resolvers = {
         },  
         addEquipment: async (arg1, EquipmentInput, context) => {
             const characterName =  context.body.variables.characterName;
-            // const equipmentsArray = context.body.variables.equipment;
-            // const helmet = EquipmentInput.equipment[0].armor[0].helmet;
-            // console.log('equipment0:', EquipmentInput.equipment[0]);
-            // console.log('helmet =', helmet);
-            // console.log('equipmentInput =', EquipmentInput.equipment[0].talismans);
-            
+            // console.log('armor =', EquipmentInput.equipment[0].armor[0]);
+            // console.log('talismans =', EquipmentInput.equipment[0].talismans[0]);
+            // console.log('weapons =',EquipmentInput.equipment[0].weapons[0]);
+            // console.log('shields =', EquipmentInput.equipment[0].shields[0]);
             if(characterName) {
                 const equipment = await Equipment.create({
-                    armor: EquipmentInput.equipment[0].armor,
-                    
-                    talismans: EquipmentInput.equipment[0].talismans,
-                    // weapons: EquipmentInput.equipment[0].weapons[0],
-                    shields: EquipmentInput.equipment[0].shields
+                    armor: EquipmentInput.equipment[0].armor[0],
+                    talismans: EquipmentInput.equipment[0].talismans[0],
+                    weapons: EquipmentInput.equipment[0].weapons[0],
+                    shields: EquipmentInput.equipment[0].shields[0]
                 });
                 // "equipment[0].weapons[0].slot1[0].weight"
                 return equipment;

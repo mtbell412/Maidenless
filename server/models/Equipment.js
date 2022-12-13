@@ -71,7 +71,7 @@ const equipmentSchema = new Schema({
             },
         }],
 
-        chestArmor: [{
+        chest: [{
             name: {
                 type: String,
             },
@@ -188,7 +188,7 @@ const equipmentSchema = new Schema({
                 type: Number,
             },
         }],
-        legs: {
+        legs: [{
             name: {
                 type: String,
             },
@@ -255,7 +255,7 @@ const equipmentSchema = new Schema({
             weight: {
                 type: Number
             },
-        },
+        }],
     }],
     talismans: [{
         slot1: [
@@ -391,7 +391,7 @@ const equipmentSchema = new Schema({
                     holy: {
                         type: Number
                     },
-                    Boost: {
+                    boost: {
                         type: Number
                     },
                 },
@@ -404,13 +404,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: String,
                     },
-                    Arc: {
+                    arc: {
                         type: String,
                     },
-                    Fai: {
+                    fai: {
                         type: String,
                     },
-                    Int: {
+                    int: {
                         type: String,
                     },
                 },
@@ -423,13 +423,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: Number,
                     },
-                    Arc: {
+                    arc: {
                         type: Number,
                     },
-                    Fai: {
+                    fai: {
                         type: Number,
                     },
-                    Int: {
+                    int: {
                         type: Number,
                     },
                 },
@@ -471,7 +471,7 @@ const equipmentSchema = new Schema({
                     holy: {
                         type: Number
                     },
-                    Crit: {
+                    crit: {
                         type: Number
                     },
                     rng: {
@@ -496,7 +496,7 @@ const equipmentSchema = new Schema({
                     holy: {
                         type: Number
                     },
-                    Boost: {
+                    boost: {
                         type: Number
                     },
                 },
@@ -509,13 +509,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: String,
                     },
-                    Arc: {
+                    arc: {
                         type: String,
                     },
-                    Fai: {
+                    fai: {
                         type: String,
                     },
-                    Int: {
+                    int: {
                         type: String,
                     },
                 },
@@ -528,13 +528,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: Number,
                     },
-                    Arc: {
+                    arc: {
                         type: Number,
                     },
-                    Fai: {
+                    fai: {
                         type: Number,
                     },
-                    Int: {
+                    int: {
                         type: Number,
                     },
                 },
@@ -576,7 +576,7 @@ const equipmentSchema = new Schema({
                     holy: {
                         type: Number
                     },
-                    Crit: {
+                    crit: {
                         type: Number
                     },
                     rng: {
@@ -601,7 +601,7 @@ const equipmentSchema = new Schema({
                     holy: {
                         type: Number
                     },
-                    Boost: {
+                    boost: {
                         type: Number
                     },
                 },
@@ -614,13 +614,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: String,
                     },
-                    Arc: {
+                    arc: {
                         type: String,
                     },
-                    Fai: {
+                    fai: {
                         type: String,
                     },
-                    Int: {
+                    int: {
                         type: String,
                     },
                 },
@@ -633,13 +633,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: Number,
                     },
-                    Arc: {
+                    arc: {
                         type: Number,
                     },
-                    Fai: {
+                    fai: {
                         type: Number,
                     },
-                    Int: {
+                    int: {
                         type: Number,
                     },
                 },
@@ -681,7 +681,7 @@ const equipmentSchema = new Schema({
                     holy: {
                         type: Number
                     },
-                    Crit: {
+                    crit: {
                         type: Number
                     },
                     rng: {
@@ -706,7 +706,7 @@ const equipmentSchema = new Schema({
                     holy: {
                         type: Number
                     },
-                    Boost: {
+                    boost: {
                         type: Number
                     },
                 },
@@ -719,13 +719,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: String,
                     },
-                    Arc: {
+                    arc: {
                         type: String,
                     },
-                    Fai: {
+                    fai: {
                         type: String,
                     },
-                    Int: {
+                    int: {
                         type: String,
                     },
                 },
@@ -738,13 +738,13 @@ const equipmentSchema = new Schema({
                     dex: {
                         type: Number,
                     },
-                    Arc: {
+                    arc: {
                         type: Number,
                     },
-                    Fai: {
+                    fai: {
                         type: Number,
                     },
-                    Int: {
+                    int: {
                         type: Number,
                     },
                 },
@@ -781,7 +781,7 @@ const equipmentSchema = new Schema({
             holy: {
                 type: Number
             },
-            Crit: {
+            crit: {
                 type: Number
             },
         }],
@@ -801,27 +801,27 @@ const equipmentSchema = new Schema({
             holy: {
                 type: Number
             },
-            Boost: {
+            boost: {
                 type: Number
             },
         }],
         category: {
             type: String,
         },
-        scaleWith: [{
+        scalesWith: [{
             str: {
                 type: String,
             },
             dex: {
                 type: String,
             },
-            Arc: {
+            arc: {
                 type: String,
             },
-            Fai: {
+            fai: {
                 type: String,
             },
-            Int: {
+            int: {
                 type: String,
             },
         }],
@@ -832,13 +832,13 @@ const equipmentSchema = new Schema({
             dex: {
                 type: Number,
             },
-            Arc: {
+            arc: {
                 type: Number,
             },
-            Fai: {
+            fai: {
                 type: Number,
             },
-            Int: {
+            int: {
                 type: Number,
             },
         }],
@@ -851,7 +851,7 @@ const equipmentSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Character',
         }
-    ]
+    ],
 });
 
 const Equipment = model('Equipment', equipmentSchema);
