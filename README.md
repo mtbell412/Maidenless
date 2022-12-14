@@ -35,7 +35,7 @@ React.js front end, Login and Signup pages
 ### Zach Lewis
 Utils (mutations and queries)on Client, CSS
 
-### Keyshon Royster
+### Keshon Royster
 Apollo GraphQl, Equipment Schema
 
 ## FutureDev
