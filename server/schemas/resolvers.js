@@ -8,11 +8,14 @@ const resolvers = {
             return User.find().populate('characters');
         },
         user: async (parent, { username }) => {
+            console.log(username);
             return User.findOne({ username }).populate('characters');
         },
         me: async (parent, args, context) => {
             if (context.user) {
-                return User.findOne({ _id: context.user._id }).populate('characters');
+                const user = User.findOne({ _id: context.user._id }).populate('characters');
+                console.log(user);
+                return user;
             }
             throw new AuthenticationError('You need to be logged in!');
         },
@@ -27,12 +30,12 @@ const resolvers = {
     Mutation: {
         addUser: async (parent, { username, email, password }) => {
             // console.log(username +email +password);
-            const user = await User.create({ username, email, password });
+            const user = await (await User.create({ username, email, password })).populate('characters');
             const token = signToken(user);
             return { token, user };
         },
         login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+            const user = await User.findOne({ email }).populate('characters');
 
             if (!user) {
                 throw new AuthenticationError('No user found with this email address');
