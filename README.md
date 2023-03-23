@@ -12,6 +12,9 @@
 ## Description
 A true companion app where you can create characters from Elden Ring with their associated builds and stats. Also, users can use provided builds to make the process of character creation more convenient.
 
+## Deployed Link
+[Live Site](https://maidenlessapp.herokuapp.com/ "Deployed Site")
+
 ## Usage
 Click this link to open the application:
 Heroku Link:
